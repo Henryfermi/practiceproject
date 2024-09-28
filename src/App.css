@@ -13,9 +13,9 @@
   justify-content: center;
   align-items: center;
   color: white;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: rgb(185, 186, 187);
-  /* position: relative; */
+  position: relative; /* Uncommented to allow positioning of pseudo-elements */
 }
 
 .first_page::before {
@@ -31,15 +31,15 @@
 .first_page h1 {
   position: relative;
   z-index: 1;
+  font-size: 2.5rem; /* Use rem for responsiveness */
 }
 
 .get-started-btn {
-  background-color:#EFC16B;
-  /* color: white; */
+  background-color: #EFC16B;
   color: black;
   border: none;
   padding: 20px 40px;
-  font-size: 19px;
+  font-size: 1.2rem; /* Use rem for responsiveness */
   border-radius: 5px;
   cursor: pointer;
 }
@@ -50,29 +50,29 @@
 
 .getstarted_btn {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5rem; /* Use rem for responsiveness */
 }
 
 .main_event {
   display: flex;
+  flex-direction: column; /* Stack items on mobile */
   width: 100vw;
   height: 100vh;
-  align-items: center;
+  align-items: center; /* Center content */
   justify-content: center;
   backdrop-filter: blur(7px);
-  gap: 100px;
+  gap: 50px; /* Adjusted for smaller screens */
   background-color: rgba(51, 61, 80, 0.7);
 }
 
 .aboutus_main {
-  width: 800px;
+  width: 90%; /* Changed to percentage for responsiveness */
+  max-width: 800px; /* Keep max-width */
   color: white;
-  /* background-color: rgba(0,0,0,0.1); */
-
 }
 
 .aboutus_container {
-  font-size: 20px;
+  font-size: 1rem; /* Use rem for responsiveness */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -80,10 +80,8 @@
 }
 
 .aboutus_container p {
-  font-size: 23px;
+  font-size: 1.2rem; /* Use rem for responsiveness */
   font-weight: 700;
-  
-
 }
 
 .first_page_name_btn {
@@ -92,16 +90,17 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 500px;
+  width: 90%; /* Changed to percentage */
+  max-width: 500px; /* Keep max-width */
 }
 
 .first_page_name_btn h1 {
-  font-size: 45px;
+  font-size: 2.5rem; /* Use rem for responsiveness */
   text-align: center;
 }
 
 .first_page_name_btn p {
-  font-size: 26px;
+  font-size: 1.5rem; /* Use rem for responsiveness */
 }
 
 .event-list-container {
@@ -123,9 +122,32 @@
 }
 
 .budget_heading {
-  font-size: 40px;
+  font-size: 2.5rem; /* Use rem for responsiveness */
 }
 
 .budget_sentence {
-  font-size: 29px;
+  font-size: 2rem; /* Use rem for responsiveness */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 700px) {
+  .first_page h1 {
+    font-size: 1.8rem; /* Adjusted for smaller screens */
+  }
+
+  .get-started-btn {
+    padding: 15px 30px; /* Adjusted padding for smaller screens */
+  }
+
+  .main_event {
+    gap: 20px; /* Reduced gap for smaller screens */
+  }
+
+  .aboutus_main, .first_page_name_btn {
+    width: 90%; /* Make full width on mobile */
+  }
+
+  .budget_heading, .budget_sentence {
+    font-size: 1.8rem; /* Adjusted font size */
+  }
 }
